@@ -10,7 +10,7 @@ st.caption("Simulated demo: EEG samples come from a public recorded dataset.")
 
 @st.cache_resource
 def load_and_train():
-    df = pd.read_csv("emotions.csv")
+    df = pd.read_csv("emotions.zip")
     df.columns = df.columns.str.replace("# ", "", regex=False)
     X = df.drop(columns="label")
     y = df["label"]
